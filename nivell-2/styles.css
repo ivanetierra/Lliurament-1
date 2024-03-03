@@ -17,42 +17,122 @@ header {
     background-position: center;
 }
 
-nav {
+.hamburger {
+    display: none;
+}
+
+.navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     width: 70px;
     padding: 10px;
-
 }
 
-nav ul {
+.menu-container {
+    position: relative;
+    width: 100%;
+}
+
+.menu-items {
     display: flex;
     justify-content: space-between;
     list-style-type: none; 
     padding: 0;
     width: 100%;
-    margin: 0 70px;
-
+    margin: 0 0 0 30px;
 }
 
-nav ul li {
+.hamburger {
+    display: none;
+    background-color: rgba(223, 168, 105, 0.815);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (min-width: 769px) {
+    .menu-items {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-items {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.menu-items li {
     flex: 1;
 }
 
-nav ul li a {
+.menu-items li a {
+    color: black;
     text-decoration: none;
     margin-left: 5px;
 }
 
 .social-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 70px;
-    margin: 0 50px 0 0;
+    margin: 0 30px 0 0;
     gap: 10px;
+}
+
+.hamburger:hover {
+    background-color: #ff7f50;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    max-width: 200px;
+    top: 100%;
+    left: 0;
+    z-index: 1; 
+    flex-direction: column;
+    background-color: rgba(223, 168, 105, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown.show {
+    display: flex;
+}
+
+.dropdown.show {
+    display: flex;
+}
+
+.dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+}
+
+.dropdown li {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown a:hover {
+    background-color: #ff7f50;
 }
 
 h1 {
@@ -131,6 +211,7 @@ h1 {
 
 .blog-item a {
     text-decoration: none;
+    color: black;
     font-weight: bold;
     padding: 5px;
     position: absolute;

@@ -12,16 +12,20 @@
     <div class="page-container">
         
         <header>
-            
-            <nav>
+            <nav class="navbar">
                 <img class="logo" src="images/logo.png" alt="Logo" loading="lazy">
-                <ul>
-                    <li><i class="fas fa-home"></i><a href="#">Inicio</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i><a href="#">Rutas</a></li>
-                    <li><i class="fas fa-hotel"></i><a href="#">Hoteles</a></li>
-                    <li><i class="fas fa-plane"></i><a href="#">Vuelos</a></li>
-                    <li><i class="fas fa-envelope"></i><a href="#">Contacto</a></li>
-                </ul>
+
+                <div class="menu-container">
+                    <button class="hamburger">MENU ☰</button>
+                    <ul class="menu-items dropdown">
+                        <li><i class="fas fa-home"></i><a href="#">Inicio</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i><a href="#">Rutas</a></li>
+                        <li><i class="fas fa-hotel"></i><a href="#">Hoteles</a></li>
+                        <li><i class="fas fa-plane"></i><a href="#">Vuelos</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -75,5 +79,7 @@
         </div>
 
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
