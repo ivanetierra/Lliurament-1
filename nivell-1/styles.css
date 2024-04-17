@@ -29,6 +29,15 @@ body{
     gap: 20px;
 }
 
+.nav-bar .nav-item:first-child {
+    transition: all 0.5s ease;
+}
+
+.nav-bar .nav-item:first-child:hover {
+    transform: scale(1.1);
+    background-color: red;
+}
+
 .nav-item{
     flex: 1;
     height: 20px;
@@ -108,7 +117,6 @@ body{
 @media (max-width: 768px) { 
     .main {
         flex-direction: column;
-        background-color: yellow;
     }
 
     .main-blog, .side-blog {
